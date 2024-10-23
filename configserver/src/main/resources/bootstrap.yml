@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations:
+              - classpath:configs
+          - type: git
+            uri: https://github.com/your-repo/config-repo
+
+server:
+  port: 8071
