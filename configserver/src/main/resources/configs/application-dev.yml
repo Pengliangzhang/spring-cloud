@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: my-app
-  datasource:
-    url: jdbc:mysql://localhost:3306/mydb_dev
-    username: dev_user
-    password: dev_password

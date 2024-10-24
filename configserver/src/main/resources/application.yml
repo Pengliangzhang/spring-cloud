@@ -6,7 +6,11 @@ spring:
       server:
         git:
           uri: https://github.com/Pengliangzhang/spring-cloud.git
-          search-paths: configserver/src/main/resources/configs
+          search-paths:
+            - configserver/src/main/resources/configs/licensing-service
+            - configserver/src/main/resources/configs/licensing-service
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_TOKEN}
 
 server:
   port: 8072
@@ -16,4 +20,4 @@ logging:
     org.springframework.cloud: DEBUG
 
 encrypt:
-  key: sezpij-2pakvI-qebwoj
+  key: ${ENCRYPT_KEY}

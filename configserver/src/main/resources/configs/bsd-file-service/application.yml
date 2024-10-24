@@ -1,8 +1,8 @@
 spring:
   application:
-    name: licensing-service
+    name: bsd-app
   datasource:
-    url: jdbc:mysql://localhost:3306/licensing-service
+    url: jdbc:mysql://localhost:3306/mydb
     username: user
     password: password
 
