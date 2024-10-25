@@ -3,10 +3,6 @@ spring:
     name: eureka-server-dev
   config:
     import: "configserver:http://localhost:8081"  # 引入 Config Server
-  cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false  # 禁用 Ribbon 负载均衡
 
 server:
   port: 8090
