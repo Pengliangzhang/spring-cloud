@@ -1,30 +1,11 @@
 spring:
   application:
-    name: eureka-server
-  config:
-    import: "configserver:http://localhost:8081"  # 引入 Config Server
-  cloud:
-    config:
-      uri: http://localhost:8081  # Config Server 的 URI
-    loadbalancer:
-      ribbon:
-        enabled: false  # 禁用 Ribbon 负载均衡
+    name: eureka-server-dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: user
+    password: password
 
-server:
-  port: 8090
-
-eureka:
-  instance:
-    hostname: localhost  # 实例的主机名
-  client:
-    transport:
-      jersey:
-        enabled: false
-    # Eureka服务端不需要向Eureka服务注册
-    register-with-eureka: false  # 注意属性名的正确拼写
-    # 不在本地缓存注册信息
-    fetch-registry: false  # 注意属性名的正确拼写
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间Z
+logging:
+  level:
+    org.springframework.cloud: DEBUG
