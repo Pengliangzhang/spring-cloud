@@ -15,5 +15,6 @@ eureka:
     register-with-eureka: false  # 注意属性名的正确拼写
     # 不在本地缓存注册信息
     fetch-registry: false  # 注意属性名的正确拼写
+    enabled: true
   server:
     waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间
