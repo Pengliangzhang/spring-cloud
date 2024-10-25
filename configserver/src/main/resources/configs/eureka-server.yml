@@ -1,6 +1,3 @@
-server:
-  port: 8090
-
 spring:
   application:
     name: eureka-server
@@ -12,6 +9,9 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false  # 禁用 Ribbon 负载均衡
+
+server:
+  port: 8090
 
 eureka:
   instance:
@@ -27,4 +27,4 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间
+    waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间Z
