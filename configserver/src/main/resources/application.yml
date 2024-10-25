@@ -7,8 +7,7 @@ spring:
         git:
           uri: https://github.com/Pengliangzhang/spring-cloud.git
           search-paths:
-            - configserver/src/main/resources/configs/licensing-service
-            - configserver/src/main/resources/configs/licensing-service
+            - configserver/src/main/resources/configs/
           username: ${GITHUB_USERNAME}
           password: ${GITHUB_TOKEN}
 
