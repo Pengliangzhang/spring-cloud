@@ -18,7 +18,7 @@ eureka:
     fetch-registry: true  # 注意属性名的正确拼写
     # enabled: true
   service-url:
-    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    defaultZone: http://localhost:8090/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间
     enable-self-preservation: false
