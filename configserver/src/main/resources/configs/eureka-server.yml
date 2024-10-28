@@ -20,3 +20,4 @@ eureka:
         http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间
+    enable-self-preservation: false
