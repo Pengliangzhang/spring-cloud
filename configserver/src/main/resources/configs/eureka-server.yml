@@ -6,7 +6,7 @@ spring:
       ribbon:
         enabled: false  # 禁用 Ribbon 负载均衡
 server:
-  port: 8090
+  port: 8091
 eureka:
   instance:
     hostname: localhost  # 实例的主机名
