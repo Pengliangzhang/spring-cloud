@@ -10,14 +10,15 @@ server:
 eureka:
   instance:
     hostname: localhost  # 实例的主机名
+    preferIpAddress: true
   client:
     # Eureka服务端不需要向Eureka服务注册
-    register-with-eureka: false  # 注意属性名的正确拼写
+    register-with-eureka: true  # 注意属性名的正确拼写
     # 不在本地缓存注册信息
-    fetch-registry: false  # 注意属性名的正确拼写
+    fetch-registry: true  # 注意属性名的正确拼写
+#    enabled: true
     serviceUrl:
-      defaultZone:
-        http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间
     enable-self-preservation: false
