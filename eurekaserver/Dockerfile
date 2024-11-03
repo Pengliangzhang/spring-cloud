@@ -6,7 +6,6 @@ COPY target/eurekaserver-${VERSION}.jar eureka-server.jar
 
 ENV SPRING_PROFILES_ACTIVE local
 
-# 暴露端口 8082
 EXPOSE 9090
 
 ENTRYPOINT ["java","-jar","/eureka-server.jar"]

@@ -6,13 +6,14 @@ spring:
       server:
         git:
           uri: https://github.com/Pengliangzhang/spring-cloud.git
+          default-label: main
           search-paths:
             - configserver/src/main/resources/configs/
           username: ${GITHUB_USERNAME}
           password: ${GITHUB_TOKEN}
 
 server:
-  port: 8072
+  port: 9080
 
 logging:
   level:
