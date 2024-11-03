@@ -1,25 +1,10 @@
+server:
+  port: 9090
 spring:
-  config:
-    import: "configserver:http://localhost:8081"  # 引入 Config Server
   application:
     name: eureka-server
+  profiles:
+    active: local
   cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false  # 禁用 Ribbon 负载均衡
-server:
-  port: 8090
-eureka:
-  instance:
-    hostname: localhost  # 实例的主机名
-  client:
-    # Eureka服务端不需要向Eureka服务注册
-    register-with-eureka: false  # 注意属性名的正确拼写
-    # 不在本地缓存注册信息
-    fetch-registry: false  # 注意属性名的正确拼写
-#    enabled: true
-    serviceUrl:
-      defaultZone:
-        http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间
+    config:
+      enabled: false

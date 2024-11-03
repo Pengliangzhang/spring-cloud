@@ -6,7 +6,7 @@ spring:
       ribbon:
         enabled: false  # 禁用 Ribbon 负载均衡
 server:
-  port: 8091
+  port: 9090
 eureka:
   instance:
     hostname: localhost  # 实例的主机名
@@ -18,7 +18,7 @@ eureka:
     fetch-registry: true  # 注意属性名的正确拼写
     # enabled: true
   service-url:
-    defaultZone: http://localhost:8090/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 5  # 同步注册表时的等待时间
     enable-self-preservation: false
